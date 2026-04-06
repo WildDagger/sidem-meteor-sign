@@ -5,28 +5,36 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <link href="css/normalize.css" rel="stylesheet">
-        <link href="css/style.css" rel="stylesheet">
+        <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
-        <main-nav>
-            <nav-brand>
-                <p>Meteor Sign</p>
-            </nav-brand>
-            <nav-menu>
-                <nav-button>紹介</nav-button>
-            </nav-menu>
-        </main-nav>
-        <div class="main-container">
-            <header></header>
-            <div class="main-content">
-                <h1></h1>
+        <meteor-background></meteor-background>
+        <main style="position: relative; z-index: 1;">
+            <main-navbar>
+                <nav-brand>
+                    <span>Meteor Sign</span>
+                </nav-brand>
+                <nav-menu>
+                    <nav-button link="#">紹介</nav-button>
+                    <nav-button link="#">最新情報</nav-button>
+                    <nav-button link="#">参加申込</nav-button>
+                    <nav-button link="#">お問い合わせ</nav-button>
+                </nav-menu>
+            </main-navbar>
+            <div class="main-container">
+                <header></header>
+                <div class="main-content">
+                    <img class="brand-logo" alt="Meteor Sign" src="img/logo_v01-white.svg">
+                </div>
             </div>
-        </div>
-        <footer>
-            <p>このサイトは有志のファンたちによる非公式サイトです。</p>
-            <p>「アイドルマスター」、「アイドルマスターSideM」はバンダイナムコエンターテインメントの商標。</p>
-        </footer>
+            <footer>
+                <p>※当企画サイトは、原作・アニメ・出版社・その他関係者様とは一切関係ありません。</p>
+                <p>※同人・二次創作に理解のない方は当サイトの閲覧をご遠慮ください。</p>
+                <p>※「アイドルマスター」、「アイドルマスターSideM」はバンダイナムコエンターテインメントの商標。</p>
+            </footer>
+        </main>
         <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
         <script src="js/components/components.js"></script>
     </body>

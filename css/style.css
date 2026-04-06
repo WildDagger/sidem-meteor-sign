@@ -3,6 +3,11 @@
     --main-text-color: #fff;
     --main-nav-background-color: #21b5c1;
     --main-nav-text-color: #fff;
+
+    --footer-background-color: #fff;
+    --footer-background-opacity: 0.85;
+    --footer-background-color-rgba: rgba(255, 255, 255, var(--footer-background-opacity));
+    --footer-text-color: #000;
 }
 
 body {
@@ -11,9 +16,25 @@ body {
     box-sizing: border-box;
 }
 
+meteor-background {
+    z-index: -99;
+}
+
+main-navbar {
+    position: fixed;
+    top: 0;
+    z-index: 99;
+}
+
 main-navbar::part(main) {
     background-color: var(--main-nav-background-color);
     color: var(--main-nav-text-color);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 .main-container {
@@ -22,4 +43,22 @@ main-navbar::part(main) {
     padding: 0 0;
     margin: 0 0;
     margin-top: 72px;
+    flex: 1;
+}
+
+.main-content {
+    margin: 0 auto;
+    padding: 0 12px
+}
+
+.main-content .brand-logo {
+    width: 100%;
+    max-width: 400px;
+    padding: 2em;
+}
+
+footer {
+    padding: 12px;
+    background-color: var(--footer-background-color-rgba);
+    color: var(--footer-text-color);
 }
