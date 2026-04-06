@@ -330,8 +330,8 @@
         connectedCallback() {
             this.attachShadow({ mode: 'open' })
 
-            const isFirstVisit = true
-            //const isFirstVisit = !sessionStorage.getItem('bg-animation-done')
+            // const isFirstVisit = true
+            const isFirstVisit = !sessionStorage.getItem('bg-animation-done')
             const svgBgUrl = './img/bg_baseball_field.svg'
 
             this.shadowRoot.innerHTML = `
