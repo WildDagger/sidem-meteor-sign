@@ -4,6 +4,11 @@
     --main-nav-background-color: #21b5c1;
     --main-nav-text-color: #fff;
 
+    --main-content-section-background-color: #fff;
+    --main-content-section-background-opacity: 0.85;
+    --main-content-section-background-color-rgba: rgba(255, 255, 255, var(--main-content-section-background-opacity));
+    --main-content-section-text-color: #000;
+
     --footer-background-color: #fff;
     --footer-background-opacity: 0.85;
     --footer-background-color-rgba: rgba(255, 255, 255, var(--footer-background-opacity));
@@ -28,6 +33,51 @@ a[href^="http"]::after {
     vertical-align: super;
 }
 
+.img-fluid {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.section {
+    padding: 12px;
+}
+
+.article {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+    .article {
+        justify-content: center;
+    }
+
+    .article.img-left {
+        flex-direction: row;
+    }
+
+    .article.img-right {
+        flex-direction: row-reverse;
+    }
+
+    .article .img, .article .text-content {
+        flex: 1;
+        min-width: 0;
+    }
+
+    .article .img {
+        width: 0;
+        object-fit: cover;
+    }
+
+    .article .text-content {
+        text-align: left;
+    }
+}
+
 meteor-background {
     z-index: -99;
 }
@@ -41,15 +91,18 @@ main-navbar {
 main-navbar::part(main) {
     background-color: var(--main-nav-background-color);
     color: var(--main-nav-text-color);
+    border-radius: 0px 0px 12px 12px;
 }
 
 main-navbar nav-menu::part(item-menu) {
     background-color: var(--main-nav-background-color);
+    border-radius: 12px;
 }
 
 @media screen and (min-width: 768px) {
     main-navbar nav-menu::part(item-menu) {
         background-color: transparent;
+        border-radius: 0px;
     }
 }
 
@@ -65,14 +118,28 @@ main {
     width: 100%;
     text-align: center;
     padding: 0 0;
-    margin: 0 0;
-    margin-top: 72px;
+    margin: 72px 0;
     flex: 1;
 }
 
 .main-content {
-    margin: 0 auto;
-    padding: 0 12px
+    margin: 24px auto;
+    padding: 0 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.main-content .section {
+    background-color: var(--main-content-section-background-color-rgba);
+    color: var(--main-content-section-text-color);
+    border-radius: 12px;
+}
+
+@media screen and (min-width: 768px) {
+    .main-content {
+        max-width: 1200px;
+    }
 }
 
 .main-header .brand-logo {
@@ -85,4 +152,7 @@ footer {
     padding: 12px;
     background-color: var(--footer-background-color-rgba);
     color: var(--footer-text-color);
+    border-radius: 12px 12px 0px 0px;
+    -webkit-border-radius: 12px 12px 0px 0px;
+    -moz-border-radius: 12px 12px 0px 0px;
 }
