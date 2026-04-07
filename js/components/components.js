@@ -65,6 +65,10 @@
                     <slot></slot>
                 </a>
             `
+
+            this.shadowRoot.querySelector('a')?.addEventListener('click', (e) => {
+                e.preventDefault()
+            })
         }
     }
 
@@ -137,7 +141,7 @@
                     :host([mobile]) .items {
                         display: none;
                         position: absolute;
-                        top: 72px;
+                        top: 60px;
                         left: 0;
                         right: 0;
                         flex-direction: column;
@@ -148,7 +152,7 @@
                 </style>
                 <div class="menu">
                     <button class="hamburger" aria-label="選單" aria-expanded="false">☰</button>
-                    <div class="items">
+                    <div part="item-menu" class="items">
                         <slot></slot>
                     </div>
                 </div>
@@ -320,6 +324,10 @@
                     <slot></slot>
                 </a>
             `
+
+            this.shadowRoot.querySelector('a')?.addEventListener('click', (e) => {
+                e.preventDefault()
+            })
         }
     }
 
@@ -350,7 +358,8 @@
                         width: 100%;
                         height: 100%;
                         overflow: hidden;
-                        background-image: radial-gradient(ellipse at top , #080e21 0%,  #1b2735 95%);
+                        /* background-image: radial-gradient(ellipse at top , #080e21 0%,  #1b2735 95%); */
+                        background-image: linear-gradient(to bottom , #0e0420 0%, #2c1349 60%,  #de7728 95%);
                         z-index: 0;
                     }
 
@@ -738,7 +747,12 @@
                     this._playIntroAnimation()
                 }, 1000);
             } else {
-                this._playIntroAnimation()
+                setTimeout(() => {
+                    this.dispatchEvent(new CustomEvent('bg-animation-done', {
+                        bubbles: true,
+                        composed: true
+                    }))
+                }, 0);
             }
         }
 

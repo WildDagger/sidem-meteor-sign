@@ -16,6 +16,18 @@ body {
     box-sizing: border-box;
 }
 
+a[href^="http"]::after {
+    content: "";
+    font-size: 0.75em;
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    background-image: url('../img/link_external.svg');
+    background-size: cover;
+    margin-left: 2px;
+    vertical-align: super;
+}
+
 meteor-background {
     z-index: -99;
 }
@@ -29,6 +41,16 @@ main-navbar {
 main-navbar::part(main) {
     background-color: var(--main-nav-background-color);
     color: var(--main-nav-text-color);
+}
+
+main-navbar nav-menu::part(item-menu) {
+    background-color: var(--main-nav-background-color);
+}
+
+@media screen and (min-width: 768px) {
+    main-navbar nav-menu::part(item-menu) {
+        background-color: transparent;
+    }
 }
 
 main {
@@ -53,7 +75,7 @@ main {
     padding: 0 12px
 }
 
-.main-content .brand-logo {
+.main-header .brand-logo {
     width: 100%;
     max-width: 400px;
     padding: 2em;
