@@ -5,8 +5,9 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+        <link rel="icon" href="img/icon_v02.svg" type="image/svg+xml">
         <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/animate.min.css">
         <link rel="stylesheet" href="css/style.css">
         <meta property="og:title" content="Meteor Sign">
     </head>
@@ -20,10 +21,10 @@
                     </a>
                 </nav-brand>
                 <nav-menu>
-                    <nav-button link="#">紹介</nav-button>
-                    <nav-button link="#">最新情報</nav-button>
-                    <nav-button link="#">参加申込</nav-button>
-                    <nav-button link="#">お問い合わせ</nav-button>
+                    <nav-button link="#introduction">イベント詳細</nav-button>
+                    <nav-button link="#information">開催情報</nav-button>
+                    <nav-button link="#application">申し込み</nav-button>
+                    <nav-button link="#contact">お問い合わせ</nav-button>
                 </nav-menu>
             </main-navbar>
             <div class="main-container">
@@ -35,40 +36,83 @@
                 </header>
                 <div class="main-content">
                     <section class="section introduction">
-                        <h1>紹介</h1>
-                        <article class="article img-left">
-                            <img class="img" src="img/temp_placeholder.png">
-                            <div class="text-content">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque iaculis ultrices diam, non egestas ex maximus sed. Nullam viverra viverra sapien at commodo. Vestibulum sit amet dolor porta, finibus odio id, faucibus enim. Nam consequat lectus sem, efficitur semper mauris fermentum a. Nunc massa ex, feugiat sit amet pulvinar et, scelerisque nec augue. Praesent at pharetra nibh, posuere placerat dolor. Aliquam gravida, velit efficitur elementum condimentum, est mauris suscipit neque, quis rutrum nibh turpis feugiat lectus. Phasellus faucibus gravida ipsum sed condimentum.</p>
-                                <p>Mauris ac diam nisi. Pellentesque suscipit, lacus ac molestie euismod, quam ipsum bibendum orci, ut mollis felis odio ac libero. Nam ut tortor faucibus, venenatis dui eget, ultrices ex. Donec erat justo, imperdiet a egestas ut, viverra non libero. Nam volutpat ante leo, accumsan interdum mi dignissim sed. Mauris efficitur ultrices mattis. Integer nec nibh sit amet eros ullamcorper mollis. Vestibulum cursus dictum vestibulum. Suspendisse congue eleifend hendrerit. Vestibulum orci nulla, lacinia vel massa at, fringilla laoreet urna. Aenean et lorem urna. Suspendisse potenti. Maecenas quis sapien facilisis, pellentesque arcu vel, vehicula est. Sed vel rutrum arcu.</p>
-                                <p>Aenean velit sapien, condimentum vel maximus vehicula, auctor in nisl. Morbi commodo ullamcorper diam at aliquam. Sed sollicitudin quis nunc vitae congue. Morbi volutpat accumsan scelerisque. Curabitur elit lorem, consectetur nec efficitur vel, sodales in nulla. Fusce sit amet vestibulum erat, tristique auctor neque. Phasellus feugiat augue vel laoreet auctor. Nunc eget vulputate nulla, quis cursus leo. Curabitur sit amet viverra diam, vel gravida libero. Morbi urna odio, sagittis id est ut, dictum fermentum tellus. Praesent eu nisi sodales, blandit justo at, bibendum eros. Cras enim lacus, pulvinar ut nulla sed, tempor suscipit nulla.</p>
-                            </div>
-                        </article>
-                        <article class="article img-right">
-                            <img class="img" src="img/temp_placeholder.png">
-                            <div class="text-content">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque iaculis ultrices diam, non egestas ex maximus sed. Nullam viverra viverra sapien at commodo. Vestibulum sit amet dolor porta, finibus odio id, faucibus enim. Nam consequat lectus sem, efficitur semper mauris fermentum a. Nunc massa ex, feugiat sit amet pulvinar et, scelerisque nec augue. Praesent at pharetra nibh, posuere placerat dolor. Aliquam gravida, velit efficitur elementum condimentum, est mauris suscipit neque, quis rutrum nibh turpis feugiat lectus. Phasellus faucibus gravida ipsum sed condimentum.</p>
-                                <p>Mauris ac diam nisi. Pellentesque suscipit, lacus ac molestie euismod, quam ipsum bibendum orci, ut mollis felis odio ac libero. Nam ut tortor faucibus, venenatis dui eget, ultrices ex. Donec erat justo, imperdiet a egestas ut, viverra non libero. Nam volutpat ante leo, accumsan interdum mi dignissim sed. Mauris efficitur ultrices mattis. Integer nec nibh sit amet eros ullamcorper mollis. Vestibulum cursus dictum vestibulum. Suspendisse congue eleifend hendrerit. Vestibulum orci nulla, lacinia vel massa at, fringilla laoreet urna. Aenean et lorem urna. Suspendisse potenti. Maecenas quis sapien facilisis, pellentesque arcu vel, vehicula est. Sed vel rutrum arcu.</p>
-                                <p>Aenean velit sapien, condimentum vel maximus vehicula, auctor in nisl. Morbi commodo ullamcorper diam at aliquam. Sed sollicitudin quis nunc vitae congue. Morbi volutpat accumsan scelerisque. Curabitur elit lorem, consectetur nec efficitur vel, sodales in nulla. Fusce sit amet vestibulum erat, tristique auctor neque. Phasellus feugiat augue vel laoreet auctor. Nunc eget vulputate nulla, quis cursus leo. Curabitur sit amet viverra diam, vel gravida libero. Morbi urna odio, sagittis id est ut, dictum fermentum tellus. Praesent eu nisi sodales, blandit justo at, bibendum eros. Cras enim lacus, pulvinar ut nulla sed, tempor suscipit nulla.</p>
+                        <h1>イベント詳細</h1>
+                        <article class="article">
+                            <p class="introduction-caution">当イベントは、アイドルマスターSideMに登場するキャラクター猪狩礼生の非公式同人イベントとなります。</p>
+                            <div class="introduction-content">
+                                <p class="main-text wow fadeInUp" data-wow-offset="25" data-wow-delay="0.5s">国境問わず、人それぞれの好きが集う空間。</p>
+                                <p class="main-text wow fadeInUp" data-wow-offset="25" data-wow-delay="0.75s">様々な想いが形になり、触れられる機会。</p>
+                                <p class="main-text wow fadeInUp" data-wow-offset="25" data-wow-delay="1s">そこで見えてくるものは、一体何か。</p>
+                                <p class="catch-copy wow fadeInUp" data-wow-offset="25" data-wow-delay="1.5s">──その<ruby>瞬間<rp>(</rp><rt>Sign</rt><rp>)</rp></ruby>を、見逃すな。</p>
                             </div>
                         </article>
                     </section>
-                    <section class="section news">
-                        <h1>最新情報</h1>
-                        <article class="article img-left">
-                            <img class="img" src="img/temp_placeholder.png">
-                            <div class="text-content">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque iaculis ultrices diam, non egestas ex maximus sed. Nullam viverra viverra sapien at commodo. Vestibulum sit amet dolor porta, finibus odio id, faucibus enim. Nam consequat lectus sem, efficitur semper mauris fermentum a. Nunc massa ex, feugiat sit amet pulvinar et, scelerisque nec augue. Praesent at pharetra nibh, posuere placerat dolor. Aliquam gravida, velit efficitur elementum condimentum, est mauris suscipit neque, quis rutrum nibh turpis feugiat lectus. Phasellus faucibus gravida ipsum sed condimentum.</p>
-                                <p>Mauris ac diam nisi. Pellentesque suscipit, lacus ac molestie euismod, quam ipsum bibendum orci, ut mollis felis odio ac libero. Nam ut tortor faucibus, venenatis dui eget, ultrices ex. Donec erat justo, imperdiet a egestas ut, viverra non libero. Nam volutpat ante leo, accumsan interdum mi dignissim sed. Mauris efficitur ultrices mattis. Integer nec nibh sit amet eros ullamcorper mollis. Vestibulum cursus dictum vestibulum. Suspendisse congue eleifend hendrerit. Vestibulum orci nulla, lacinia vel massa at, fringilla laoreet urna. Aenean et lorem urna. Suspendisse potenti. Maecenas quis sapien facilisis, pellentesque arcu vel, vehicula est. Sed vel rutrum arcu.</p>
+                    <section class="section information">
+                        <h1>開催情報</h1>
+                        <h2>開催日時</h2>
+                        <article class="article">
+                            <p>8月11日（火・祝）AM10:00～8月15日（土）AM02:00</p>
+                            <p class="post-script">88時間開催 ※日本時間基準</p>
+                        </article>
+                        <h2>開催会場について</h2>
+                        <article class="article">
+                            <p>当イベントは<span class="highlight">エアブー様</span>で開催いたします。</p>
+                            <ul class="no-list-decoration">
+                                <li>
+                                    <p>一般会場</p>
+                                    <a href="https://air-boo.jp/737330" target="_blank" rel="noopener noreferrer">https://air-boo.jp/737330</a>
+                                </li>
+                                <li>
+                                    <p class="restrict-area mark">成人向け会場</p>
+                                    <a href="https://air-boo.jp/737331" target="_blank" rel="noopener noreferrer">https://air-boo.jp/737331</a>
+                                </li>
+                            </ul>
+                        </article>
+                        <h2>一般・サークル参加費用について</h2>
+                        <article class="article">
+                            <p>有志イベント開催につき、無料</p>
+                        </article>
+                        <h2>ご参加について</h2>
+                        <article class="article">
+                            <div>
+                                <p>エアブー様の参加要項、ご利用ガイドを遵守した上でのご参加が可能です。</p>
+                                <p>参加要項：<a href="https://air-boo.jp/rule" target="_blank" rel="noopener noreferrer">https://air-boo.jp/rule</a></p>
+                                <p>ご利用ガイド：<a href="https://air-boo.jp/guide" target="_blank" rel="noopener noreferrer">https://air-boo.jp/guide</a></p>
+                            </div>
+                            <div>
+                                <h3>一般参加</h3>
+                                <ul class="center-block">
+                                    <li>ご自由に会場内を歩き回ること、サークルスペースの展示物がご閲覧できます。</li>
+                                    <li>匿名ご入場も可能です。</li>
+                                    <li>コメントや寄せ書き企画等、ご参加やご交流をされたい場合、エアブー様へのご登録を推薦いたします。</li>
+                                    <li>当イベントが用意するスペース以外の記念撮影に関しては、サークルご参加者様のご許可をお取りください。</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h3>サークル参加</h3>
+                                <ul class="center-block">
+                                    <li>1枚や一言、推し活や考察、成人向け※、<span class="highlight">猪狩礼生</span>が登場するご創作や想いが込められたものなんでも可。</li>
+                                    <li>過去作品のご展示、進捗報告共有でのご参加も歓迎しております。</li>
+                                </ul>
+                                <p>※成人向けは、同日程・完全別枠開催になります。</p>
                             </div>
                         </article>
-                        <article class="article img-right">
-                            <img class="img" src="img/temp_placeholder.png">
-                            <div class="text-content">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque iaculis ultrices diam, non egestas ex maximus sed. Nullam viverra viverra sapien at commodo. Vestibulum sit amet dolor porta, finibus odio id, faucibus enim. Nam consequat lectus sem, efficitur semper mauris fermentum a. Nunc massa ex, feugiat sit amet pulvinar et, scelerisque nec augue. Praesent at pharetra nibh, posuere placerat dolor. Aliquam gravida, velit efficitur elementum condimentum, est mauris suscipit neque, quis rutrum nibh turpis feugiat lectus. Phasellus faucibus gravida ipsum sed condimentum.</p>
-                                <p>Mauris ac diam nisi. Pellentesque suscipit, lacus ac molestie euismod, quam ipsum bibendum orci, ut mollis felis odio ac libero. Nam ut tortor faucibus, venenatis dui eget, ultrices ex. Donec erat justo, imperdiet a egestas ut, viverra non libero. Nam volutpat ante leo, accumsan interdum mi dignissim sed. Mauris efficitur ultrices mattis. Integer nec nibh sit amet eros ullamcorper mollis. Vestibulum cursus dictum vestibulum. Suspendisse congue eleifend hendrerit. Vestibulum orci nulla, lacinia vel massa at, fringilla laoreet urna. Aenean et lorem urna. Suspendisse potenti. Maecenas quis sapien facilisis, pellentesque arcu vel, vehicula est. Sed vel rutrum arcu.</p>
-                            </div>
-                        </article>
+                    </section>
+                    <section class="section application">
+                        <h1>サークル申し込み</h1>
+                        <p>その他、サークル申し込み等イベント詳細はこちら</p>
+                        <ul class="center-block">
+                            <li>一般会場：<a href="https://air-boo.jp/737330" target="_blank" rel="noopener noreferrer">https://air-boo.jp/737330</a></li>
+                            <li>成人向け会場：<a href="https://air-boo.jp/737331" target="_blank" rel="noopener noreferrer">https://air-boo.jp/737331</a></li>
+                        </ul>
+                    </section>
+                    <section class="section contact">
+                        <h1>お問い合わせ</h1>
+                        <p>当イベントに関するお問い合わせ</p>
+                        <p>主催　真夏間チョパ</p>
+                        <p><a href="https://www.pixiv.net/users/126665232" target="_blank" rel="noopener noreferrer">pixiv</a></p>
+                        <p>E-Mail: <a href="mailto:meteorsign.108@gmail.com">meteorsign.108@gmail.com</a></p>
+                        <p>※お問い合わせ内容により、お時間をいただく場合もございます。何卒ご了承ください。</p>
                     </section>
                 </div>
             </div>
@@ -79,7 +123,9 @@
             </footer>
         </main>
         <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+        <script src="js/wow.min.js"></script>
         <script src="js/components/components.js"></script>
         <script src="js/common.js"></script>
+        <script src="js/index.js"></script>
     </body>
 </html>

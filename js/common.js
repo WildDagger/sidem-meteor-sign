@@ -16,6 +16,14 @@
             if (link) {
                 if (link === '#') return
 
+                if (link.startsWith('#')) {
+                    const targetElement = document.querySelector(`.${link.substring(1)}`)
+                    if (targetElement) {
+                        targetElement.scrollIntoView({behavior: 'smooth'})
+                        return
+                    }
+                }
+
                 if (target === '_blank') {
                     window.open(link, '_blank')
                 } else {

@@ -50,6 +50,15 @@ a[href^="http"]::after {
     margin: 0 auto;
 }
 
+ul.no-list-decoration {
+    list-style: none;
+    padding: 0;
+}
+
+.highlight {
+    font-weight: bold;
+}
+
 @media screen and (min-width: 768px) {
     .article {
         justify-content: center;
@@ -139,11 +148,55 @@ main {
     background-color: var(--main-content-section-background-color-rgba);
     color: var(--main-content-section-text-color);
     border-radius: 12px;
+    scroll-margin-top: 72px;
+}
+
+.introduction .introduction-caution {
+    font-size: 0.5em;
+    opacity: 0.75;
+}
+
+.introduction .introduction-content {
+    margin:0 auto;
+    padding: 5em 0;
+    width: 100%;
+    text-align: left;
+    font-size: 1.25em;
+}
+
+.introduction .introduction-content .main-text {
+    font-size: 1.5em;
+}
+
+.introduction .introduction-content .catch-copy {
+    padding-top: 5em;
+    text-align: right;
+    font-weight: bold;
+}
+
+.article .post-script {
+    margin: 0;
+    font-size: 0.5em;
+}
+
+.restrict-area.mark::before {
+    content: '🔞';
+    padding-right: 0.25em;
+}
+
+
+ul.center-block {
+    display: inline-block;
+    text-align: left;
 }
 
 @media screen and (min-width: 768px) {
     .main-content {
         max-width: 1200px;
+    }
+
+    .introduction .introduction-content {
+        max-width: 900px;
     }
 }
 
