@@ -53,12 +53,15 @@
                         display: inline-flex; 
                         align-items: center; 
                         padding: 8px 16px;
-                        text-decoration: none;
+                        text-decoration: var(--nav-link-text-decoration, none);
                         transition: all 0.3s;
+                        color: var(--nav-link-color, #00f);
                     }
                     
                     a:hover {
                         font-weight: 500;
+                        color: var(--nav-link-hover-color, #00f);
+                        text-decoration: var(--nav-link-hover-text-decoration, underline);
                     }
                 </style>
                 <a part="link" href="${link}" target="${target}">

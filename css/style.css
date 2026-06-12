@@ -3,6 +3,13 @@
     --main-text-color: #fff;
     --main-nav-background-color: #21b5c1;
     --main-nav-text-color: #fff;
+    --main-nav-link-color: #fff;
+    --main-nav-link-hover-color: #ffffa9;
+
+    --link-color: #00f;
+    --link-hover-color: #00f;
+    --link-text-decoration: none;
+    --link-hover-text-decoration: underline;
 
     --main-content-section-background-color: #fff;
     --main-content-section-background-opacity: 0.85;
@@ -19,6 +26,17 @@ body {
     background-color: #010717;
     color: #fff;
     box-sizing: border-box;
+}
+
+a {
+    color: var(--link-color);
+    text-decoration: var(--link-text-decoration);
+    transition: all 0.3s;
+}
+
+a:hover {
+    color: var(--link-hover-color);
+    text-decoration: var(--link-hover-text-decoration);
 }
 
 a[href^="http"]::after {
@@ -113,6 +131,11 @@ main-navbar nav-menu::part(item-menu) {
     border-radius: 12px;
 }
 
+main-navbar nav-button {
+    --nav-link-color: var(--main-nav-link-color);
+    --nav-link-hover-color: var(--main-nav-link-hover-color);
+}
+
 @media screen and (min-width: 768px) {
     main-navbar nav-menu::part(item-menu) {
         background-color: transparent;
@@ -158,14 +181,14 @@ main {
 
 .introduction .introduction-content {
     margin:0 auto;
-    padding: 5em 0;
+    padding: 2em 0;
     width: 100%;
     text-align: left;
     font-size: 1.25em;
 }
 
 .introduction .introduction-content .main-text {
-    font-size: 1.5em;
+    font-size: 1.35em;
 }
 
 .introduction .introduction-content .catch-copy {
